@@ -69,6 +69,25 @@ h3.sub{font-size:1.25rem;margin:22px 0 4px;color:var(--ink)}
 .result .line{display:flex;justify-content:space-between;font-size:1.05rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.25)}
 .result .gap-label{margin:16px 0 0;font-size:1.05rem;color:var(--gold);font-weight:bold;letter-spacing:.04em;text-transform:uppercase}
 .result .gap{font-size:3rem;font-weight:bold;line-height:1.1;margin:2px 0 6px}
+.capture{margin-top:20px;background:var(--soft);border:2px solid var(--gold-dark);border-radius:var(--radius);padding:22px;text-align:center}
+.capture-kicker{margin:0;font-size:.85rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-dark)}
+.capture-big{font-family:"Newsreader",Georgia,serif;font-size:3.4rem;font-weight:700;line-height:1.05;margin:4px 0 8px}
+.capture-sub{margin:0 0 10px;font-size:1.02rem}
+.capture-gap{margin:0 0 14px;font-size:1.08rem}
+.capture-trust{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-align:left;font-size:.98rem;margin:0 0 16px}
+.capture-trust p{margin:0}
+@media (prefers-color-scheme: dark){.capture-trust{background:rgba(255,255,255,.06)}}
+.capture-cta{display:flex;align-items:center;justify-content:center;background:var(--emerald);color:#fff;font-weight:800;font-size:clamp(1.02rem,4.6vw,1.25rem);line-height:1.3;padding:16px 12px;min-height:56px;border-radius:999px;text-decoration:none;border:2px solid var(--emerald)}
+.capture-note{font-size:.95rem;color:var(--muted);margin:10px 0 0}
+.capture-note a{color:var(--emerald);font-weight:800}
+.capture-email{margin-top:20px;border-top:1px solid var(--line);padding-top:16px;text-align:left}
+.capture-email h3{margin:0 0 6px;font-size:1.15rem;text-align:center}
+.capture-email p{margin:0 0 10px;font-size:.98rem}
+.capture-email label{display:block;font-weight:700;margin:10px 0 4px}
+.capture-email input{width:100%;box-sizing:border-box;padding:12px;border:1px solid var(--line);border-radius:10px;font-size:1rem}
+.capture-send{display:flex;align-items:center;justify-content:center;margin-top:14px;background:var(--navy);color:#fff;font-weight:800;font-size:1.05rem;padding:14px 12px;min-height:52px;border-radius:999px;text-decoration:none;border:2px solid var(--navy)}
+@media (prefers-color-scheme: dark){.capture-send{background:var(--gold);color:#16283c;border-color:var(--gold)}}
+.capture-fine{font-size:.88rem;color:var(--muted);margin:10px 0 0}
 .result .covered{background:rgba(255,255,255,.12);border-radius:8px;padding:12px;font-size:1rem;margin-top:10px}
 .note{font-size:1rem;margin:16px 0 0}
 a.call{display:flex;align-items:center;justify-content:center;background:var(--emerald);color:#fff;text-align:center;font-weight:800;font-size:clamp(1rem,4.5vw,1.2rem);line-height:1.3;white-space:nowrap;padding:16px 10px;min-height:56px;border-radius:999px;text-decoration:none;margin-top:16px;border:2px solid var(--emerald)}
@@ -927,6 +946,28 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
       <div class="covered" id="r-covered" hidden>You're covered on paper — but prices rise and policies change. A free review takes about 10 minutes.</div>
     </div>
 
+    <div class="capture" id="captureMoment">
+      <p class="capture-kicker">Your number</p>
+      <div class="capture-big" id="capTotal">$16,800</div>
+      <p class="capture-sub">That&rsquo;s your total need &mdash; final expenses plus anything you want to leave behind. For most Las Vegas families, a funeral alone runs <strong>$13,000 &ndash; $18,000</strong> all in, and <strong>$16,800</strong> is the figure Christopher plans around.</p>
+      <p class="capture-gap" id="capGapLine">You already have <strong id="capHave">$0</strong> in place &mdash; so right now, about <strong id="capGap">$16,800</strong> of that would come out of your family&rsquo;s pocket in the first week or two.</p>
+      <div class="capture-trust">
+        <p><strong>This isn&rsquo;t a quote.</strong> That number is a planning estimate, built from the costs you just added up &mdash; it isn&rsquo;t an insurance quote, and it isn&rsquo;t coverage. Prices vary by funeral home, and what a plan would cost you depends on your age and the options you qualify for. The only way to get a real number is a short phone call.</p>
+      </div>
+      <a class="capture-cta" id="capBook" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call &mdash; let&rsquo;s walk through your <span id="capCtaNum">$16,800</span> number together</a>
+      <p class="capture-note">Phone only, about 10 minutes, at a time that suits you. Rather just call? <a href="tel:+17023474536">Call Christopher &mdash; (702) 347-4536</a>. He answers his own phone.</p>
+      <div class="capture-email">
+        <h3>Optional &mdash; want a copy of your numbers?</h3>
+        <p>I&rsquo;ll email you the breakdown &mdash; your total, what you already have, and the gap &mdash; so you can look it over or show your family. The planner stays free either way, and your results are already on this page whether you do this or not.</p>
+        <label for="capName">Your name</label>
+        <input type="text" id="capName" autocomplete="name" placeholder="Your name">
+        <label for="capEmail">Your email</label>
+        <input type="email" id="capEmail" autocomplete="email" placeholder="you@example.com">
+        <a class="capture-send" id="capSend" href="https://docs.google.com/forms/d/e/1FAIpQLSdz2V0_j5MjTgHskc0z3ymIPfHT0z2wiznFQL4RE9QGvUzv1w/viewform" target="_blank" rel="noopener">Email me my breakdown</a>
+        <p class="capture-fine">Tap the button and a short form opens in a new tab &mdash; your name and email are all it asks, plus your number if you want to add it. I&rsquo;ll email your breakdown and the free planner. No spam, and I won&rsquo;t call unless you book a call or ask me to.</p>
+      </div>
+    </div>
+
     <p class="note">One thing worth knowing: the cost of coverage is based on your age and health — so the least expensive day to lock it in is today. Every year you wait, it costs more, and a change in health can close the door entirely.</p>
 
     <div class="close-block">
@@ -1488,6 +1529,15 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
     <p class="lede">Everything this planner figured out about your situation — your score, your gap, your legacy, your hard truths — laid out on one clean sheet. <strong>Print it. Put it on the fridge. When you're ready, the number's right there.</strong></p>
     <button type="button" class="print-btn" id="summaryBtn">Create My Plan Summary</button>
     <p style="font-size:.9rem;color:var(--muted);margin:10px 0 0;text-align:center">Your summary appears below — from there, use your browser or phone menu to print it or save it as a PDF.</p>
+    <div class="capture" style="text-align:center">
+      <p class="capture-kicker">Your number, one more time</p>
+      <div class="capture-big"><span class="dyn-total">$16,800</span></div>
+      <p class="capture-gap">That&rsquo;s your total need. Right now the gap your family would face is <strong class="dyn-gap">$16,800</strong> &mdash; that&rsquo;s the part a short phone call can close.</p>
+      <div class="capture-trust"><p><strong>This isn&rsquo;t a quote.</strong> Your figures are a planning estimate from this planner, not an insurance quote and not coverage. What a plan would cost you depends on your age and the options you qualify for &mdash; that&rsquo;s a short phone conversation, not something a web page can honestly tell you.</p></div>
+      <a class="capture-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call</a>
+      <p class="capture-note">Phone only, about 10 minutes. Rather just call? <a href="tel:+17023474536">Call Christopher &mdash; (702) 347-4536</a>.</p>
+      <p class="capture-fine" style="text-align:center">Optional &mdash; want this breakdown emailed to you? The &ldquo;Email me my breakdown&rdquo; form is right under your numbers in Step 2, and the planner stays free either way.</p>
+    </div>
     <p class="sheet-note" id="summaryNote">Your plan summary is ready below. To keep a paper or PDF copy, open your browser or phone menu and choose <strong>Print</strong> or <strong>Save as PDF</strong>.</p>
     <div class="close-block">
       <p class="close-recap">A sheet on the fridge doesn't close the gap — it just keeps it visible. The call closes it.</p>
@@ -3644,6 +3694,24 @@ document.querySelectorAll('.steps-list a').forEach(function(a){
     if(navigator.share){navigator.share({title:'Final Expense Planner \u2014 Christopher M. Spruell',text:'A free, plain-words planner that helps your family get final expenses organized in five simple steps.',url:url}).then(function(){done('Thank you for sharing.');}).catch(function(err){if(err&&err.name==='AbortError'){return;}fCopy();});}
     else{fCopy();}
   });
+})();
+</script>
+
+<script>
+/* Funnel fold-in: planner capture moment sync (reads the calculator's own outputs; changes no math) */
+(function(){
+  var BREAKDOWN_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdz2V0_j5MjTgHskc0z3ymIPfHT0z2wiznFQL4RE9QGvUzv1w/viewform";
+  var BOOKING_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform";
+  function txt(id){var e=document.getElementById(id);return e?e.textContent:"";}
+  function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+  function sync(){ set('capTotal',txt('r-total')); set('capHave',txt('r-have')); set('capGap',txt('r-gap')); set('capCtaNum',txt('r-total')); }
+  ['r-total','r-have','r-gap'].forEach(function(id){var e=document.getElementById(id);if(e&&window.MutationObserver){new MutationObserver(sync).observe(e,{childList:true,characterData:true,subtree:true});}});
+  sync();
+  var book=document.getElementById('capBook'); if(book)book.href=BOOKING_FORM_URL;
+  var send=document.getElementById('capSend');
+  if(send){send.href=BREAKDOWN_FORM_URL;send.addEventListener('click',function(){
+    try{localStorage.setItem('breakdownAsk',JSON.stringify({name:(document.getElementById('capName')||{}).value||'',email:(document.getElementById('capEmail')||{}).value||'',total:txt('r-total'),have:txt('r-have'),gap:txt('r-gap'),when:new Date().toISOString()}));}catch(e){}
+  });}
 })();
 </script>
 </body>
