@@ -788,6 +788,7 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
         <span class="chev" aria-hidden="true">▾</span>
       </button>
       <div class="fold-body" id="questChecksBody" hidden>
+    <p class="hint" style="margin:0 0 10px">Check off only what&rsquo;s truly in place today. There are no wrong answers &mdash; this just shows your family where things stand.</p>
     <div id="questList">
       <label class="check-item"><input type="checkbox" class="quest-check" data-step="calc" data-pts="25" data-label="Ran my numbers in the calculator"><span>Ran my numbers in the calculator<small><a href="#" class="jump" data-goto="calc">Go to the calculator →</a></small></span><span class="pts">25 pts</span></label>
       <label class="check-item"><input type="checkbox" class="quest-check" data-step="wishes" data-pts="25" data-label="Wrote down my final wishes"><span>Wrote down my final wishes<small><a href="#" class="jump" data-goto="wishes">Go to My Final Wishes →</a></small></span><span class="pts">25 pts</span></label>
@@ -866,6 +867,7 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
       <button type="button" id="btnCremation" aria-pressed="false">Cremation</button>
     </div>
 
+    <p class="hint" style="margin:0 0 8px">Pick burial or cremation &mdash; whichever you&rsquo;d want. You can switch any time; the lines below just start from typical numbers.</p>
     <div id="calcRows">
       <div class="row"><div><label for="f-services">Funeral home services &amp; ceremony</label><span class="hint">Typical $2,500 – $6,000</span></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-services" value="3500"></div></div>
 
@@ -882,6 +884,7 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
       <div class="row"><div><label for="f-medical">Final medical bills</label><span class="hint">Any bills you expect to remain</span></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-medical" value="0"></div></div>
       <div class="row"><div><label for="f-debts">Debts to clear</label><span class="hint">Cards, loans, or other balances</span></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-debts" value="0"></div></div>
       <div class="row"><div><label for="f-cushion">A cushion for the family</label><span class="hint">Extra to help loved ones through the first months</span></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-cushion" value="0"></div></div>
+      <p class="hint" style="margin:10px 0 2px">Change any line to fit your family &mdash; your total updates as you go. These are planning numbers, not a quote.</p>
     </div>
       </div>
     </div>
@@ -935,6 +938,7 @@ header.site::after{content:"";position:absolute;left:50%;bottom:-8px;width:11px;
     <h3 class="sub">What you already have</h3>
     <div class="row"><div><label for="f-insurance">Life insurance you already have</label></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-insurance" value="0"></div></div>
     <div class="row"><div><label for="f-savings">Savings set aside for this</label></div><div class="money"><span>$</span><input type="number" inputmode="numeric" min="0" id="f-savings" value="0"></div></div>
+    <p class="hint" style="margin:8px 0 4px">Only count what&rsquo;s really in place today. Zero is a fine answer &mdash; most families start at zero.</p>
 
     <div class="result" aria-live="polite">
       <div class="line"><span>Final expenses</span><strong id="r-final">$16,800</strong></div>
